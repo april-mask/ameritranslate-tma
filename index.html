@@ -6,6 +6,19 @@
 <meta name="theme-color" content="#121718">
 <title>AmeriTranslate · Language studio</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+(function() {
+  const tg = window.Telegram?.WebApp;
+  if (tg) {
+    tg.ready();
+    const user = tg.initDataUnsafe?.user;
+    if (user && user.id && user.id !== 1279399031) {
+      document.write('<div style="background:#0b0e14;color:#f87171;font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center;padding:20px;"><h2>🔒 Access Restricted</h2><p>This private Telegram Mini App is restricted to authorized operator (1279399031) only.</p></div>');
+      window.stop();
+    }
+  }
+})();
+</script>
 <link rel="stylesheet" href="studio.css?v=2.2.0">
 </head>
 <body>
